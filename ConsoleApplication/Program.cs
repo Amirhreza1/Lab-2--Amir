@@ -16,6 +16,8 @@ namespace ConsolApplication
             var shapegen = new List<Shape>();
 
             Shape3D myshape = null;
+            
+            float totalArea = 0;
 
 
             for (var i = 0; i < 20; i++)
@@ -33,11 +35,14 @@ namespace ConsolApplication
                 }
 
                 Console.WriteLine($"{shape}");
+                totalArea += shape.Area;
                 
             }
 
+            Console.WriteLine($"Avrege area of all hapes: {totalArea / 20:0.0}");
             Console.WriteLine(
                 $"The Shape3D with the largest volume is {myshape}\nwith the volume of: {myshape.Volume:0.0}");
+            Console.ReadKey();
         }
     }
 }
