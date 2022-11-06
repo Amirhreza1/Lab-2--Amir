@@ -35,19 +35,9 @@ namespace ClassLibrary
             _width = width;
             _isSquare = true;
         }
-        public string IsSquare
-        {
-            get
-            {
-                if (_isSquare != true)
-                    return "False";
-                else
-                {
-                    return "True";
-                }
-
-            }
-        }
+        
+        public bool IsSquare=>  _height == _width;
+        
         public override Vector3 Center => new Vector3(_center.X, _center.Y, 0f);
         public override float Area => (float)(_width * _height);
         public override float Circumference => (float)(_width * 2) + (_height * 2);
