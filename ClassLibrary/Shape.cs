@@ -10,7 +10,7 @@ namespace ClassLibrary
 
         public static Shape GenerateShape()
         {
-            var RandomShape = random.Next(0, 7);
+            var RandomShape = random.Next(0, 6);
 
             switch (RandomShape)
             {
@@ -26,17 +26,17 @@ namespace ClassLibrary
                     return new Rectangle(new Vector2((float)RandomFloat(1, 5), (float)RandomFloat(1, 5)),
                         (float)RandomFloat(1, 5));
 
-                case 4:
+                case 3:
                     return new Cuboid(
                         new Vector3((float)RandomFloat(1, 5), (float)RandomFloat(1, 5), (float)RandomFloat(1, 5)),
                         new Vector3((float)RandomFloat(1, 5), (float)RandomFloat(1, 5), (float)RandomFloat(1, 5)));
 
-                case 5:
+                case 4:
                     return new Cuboid(
                         new Vector3((float)RandomFloat(1, 5), (float)RandomFloat(1, 5), (float)RandomFloat(1, 5)),
                         (float)RandomFloat(1, 5));
 
-                case 6:
+                case 5:
                     return new Sphere(
                         new Vector3((float)RandomFloat(1, 5), (float)RandomFloat(1, 5), (float)RandomFloat(1, 5)),
                         (float)RandomFloat(1, 5));
@@ -64,16 +64,16 @@ namespace ClassLibrary
                     return new Rectangle(new Vector2(centerInput.X, centerInput.Y), (float)RandomFloat(1, 5));
 
 
-                case 4:
+                case 3:
                     return new Cuboid(new Vector3(centerInput.X, centerInput.Y, centerInput.Z),
                         new Vector3((float)RandomFloat(1, 5), (float)RandomFloat(1, 5), (float)RandomFloat(1, 5)));
 
 
-                case 5:
+                case 4:
                     return new Cuboid(new Vector3(centerInput.X, centerInput.Y, centerInput.Z), (float)RandomFloat(1, 5));
 
 
-                case 6:
+                case 5:
                     return new Sphere(new Vector3(centerInput.X, centerInput.Y, centerInput.Z), (float)RandomFloat(1, 5));
             }
 
