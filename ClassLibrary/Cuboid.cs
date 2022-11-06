@@ -36,18 +36,8 @@ namespace ClassLibrary
         }
         public override Vector3 Center => new Vector3(_center.X, _center.Y, _center.Z);
 
-        public string IsCube
-        {
-            get
-            {
-                if (_isCube != true)
-                    return "False";
-                else
-                {
-                    return "True";
-                }
-            }
-        }
+        public bool IsCube => _height == _width; 
+
         public override float Area => (float)((2 * _length * _width) + (2 * _length * _height) + (2 * _height * _width));
 
         public override float Volume
